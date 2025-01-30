@@ -48,8 +48,9 @@ header {
     position: relative;
     margin-top: 0;
     display: flex;
-    align-items: center; 
-    gap: 20px; 
+    flex-wrap: wrap; /* Permite quebra de linha em mobile */
+    align-items: center;
+    gap: 20px;
 }
 
 .profile-photo {
@@ -59,27 +60,61 @@ header {
     object-fit: cover;
     border: 5px solid var(--profile-border);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    flex-shrink: 0; /* Impede que a imagem diminua */
 }
 
 .header-text {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente os textos */
+    justify-content: center;
+    min-width: 250px; /* Evita textos muito estreitos */
+    flex: 1;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin: 0;
-    color: white;
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha elementos verticalmente */
+        text-align: center;
+        padding: 1.5rem;
+        gap: 15px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .header-text {
+        align-items: center; /* Centraliza texto em mobile */
+        min-width: auto;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reduz tamanho do título */
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 1rem; /* Reduz tamanho do texto */
+    }
 }
 
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    color: white;
-    margin: 0;
+/* Ajuste extra para telas muito pequenas */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
 }
-
 
 /* Seção de Projetos */
 .projetos-container {
@@ -373,18 +408,4 @@ footer {
 h2 {
     text-align: center;
     width: 100%;
-}
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .profile-photo {
-        margin-bottom: 1rem;
-    }
-    
-    header h1 {
-        transform: none;
-    }
 }
