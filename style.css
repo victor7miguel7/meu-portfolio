@@ -1,0 +1,371 @@
+/* style.css */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --header-bg: #2c3e50;
+    --footer-bg: #2c3e50;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --link-color: #3498db;
+    --secondary-text: #666;
+    --close-color: #333;
+    --profile-border: #ffffff;
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --header-bg: #121212;
+    --footer-bg: #121212;
+    --card-bg: #2d2d2d;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --link-color: #8ab4f8;
+    --secondary-text: #b0b0b0;
+    --close-color: #e0e0e0;
+    --profile-border: #2d2d2d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 100px 2rem 2rem 2rem;
+    position: relative;
+    margin-top: 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--profile-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+header h1 {
+    margin-left: 180px;
+    font-size: 2.2rem;
+    margin-top: 0;
+    color: white;
+}
+
+header p {
+    margin-left: 180px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Seção de Projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.projeto-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--link-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Seção de Habilidades */
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.habilidade-item {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.habilidade-item i {
+    font-size: 2rem;
+    color: var(--link-color);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#modal-imagem {
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.github-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--close-color);
+}
+
+/* Certificações */
+#certificacoes {
+    padding: 2rem;
+    background: var(--bg-color);
+}
+
+.certificacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificacao-coluna {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    font-size: 0.9em;
+    height: 500px;
+    overflow: hidden;
+}
+
+.certificacao-coluna.dio-scroll {
+    overflow-y: auto;
+}
+
+.certificacao-coluna h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certificacao-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.certificacao-lista li {
+    padding: 0.6rem 0;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.certificacao-lista li:last-child {
+    border-bottom: none;
+}
+
+.certificacao-lista span {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.85em;
+    color: var(--secondary-text);
+}
+
+/* Barra de Scroll Personalizada */
+.certificacao-coluna::-webkit-scrollbar {
+    width: 8px;
+}
+
+.certificacao-coluna::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-radius: 4px;
+}
+
+.certificacao-coluna::-webkit-scrollbar-thumb {
+    background: var(--link-color);
+    border-radius: 4px;
+}
+
+/* Rodapé */
+footer {
+    background: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contato-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.contato-links a:hover {
+    color: var(--link-color);
+}
+
+/* Botão de Tema */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.theme-toggle i {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .certificacoes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 80px 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        top: 20px;
+        left: 20px;
+    }
+    
+    header h1, header p {
+        margin-left: 140px;
+    }
+    
+    .certificacoes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificacao-coluna {
+        height: auto;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajuste geral para títulos */
+h2 {
+    text-align: center;
+    width: 100%;
+}
