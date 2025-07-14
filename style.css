@@ -411,7 +411,8 @@ h2 {
 }
 
 #sobre {
-    max-width: 900px;
+
+    max-width: 1325px;
     margin: 0 auto;
     padding: 2rem 1rem;
     line-height: 1.7;
