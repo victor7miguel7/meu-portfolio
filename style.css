@@ -409,3 +409,11 @@ h2 {
     text-align: center;
     width: 100%;
 }
+
+#sobre {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
