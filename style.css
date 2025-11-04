@@ -271,6 +271,35 @@ footer p {
     transform: scale(1.08);
 }
 
+/* Ícones de contato no cabeçalho */
+.header-contatos {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-contatos a {
+    color: var(--profile-border); /* marrom claro no tema claro */
+    font-size: 1.3rem;
+    transition: color 0.15s ease, transform 0.12s ease;
+}
+
+.header-contatos a:hover {
+    color: var(--link-color); /* verde escuro no hover */
+    transform: scale(1.1);
+}
+
+/* Tema escuro: ícones em verde oliva claro, hover marrom claro */
+.dark-mode .header-contatos a {
+    color: #8fbc8f;
+}
+
+.dark-mode .header-contatos a:hover {
+    color: var(--profile-border);
+    transform: scale(1.1);
+}
+
+
 /* Botão de Tema */
 .theme-toggle {
     position: fixed;
