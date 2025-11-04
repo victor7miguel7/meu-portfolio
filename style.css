@@ -8,30 +8,32 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Paleta personalizada */
 :root {
     --bg-color: #f5f5f5;
-    --text-color: #333;
-    --header-bg: #2c3e50;
-    --footer-bg: #2c3e50;
+    --text-color: #2b2b2b;
+    --header-bg: #1b4d3e; /* verde escuro */
+    --footer-bg: #1b4d3e;
     --card-bg: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.1);
-    --link-color: #3498db;
-    --secondary-text: #666;
-    --close-color: #333;
-    --profile-border: #ffffff;
+    --link-color: #1b4d3e; /* verde escuro */
+    --secondary-text: #6b4f35; /* marrom suave */
+    --close-color: #2b2b2b;
+    --profile-border: #d2b48c; /* marrom claro */
 }
 
+/* Tema escuro */
 .dark-mode {
-    --bg-color: #1a1a1a;
+    --bg-color: #121212;
     --text-color: #e0e0e0;
-    --header-bg: #121212;
-    --footer-bg: #121212;
-    --card-bg: #2d2d2d;
-    --card-shadow: rgba(0, 0, 0, 0.3);
-    --link-color: #8ab4f8;
-    --secondary-text: #b0b0b0;
+    --header-bg: #0d261e;
+    --footer-bg: #0d261e;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+    --link-color: #8fbc8f; /* verde oliva claro */
+    --secondary-text: #d2b48c;
     --close-color: #e0e0e0;
-    --profile-border: #2d2d2d;
+    --profile-border: #1e1e1e;
 }
 
 body {
@@ -48,7 +50,7 @@ header {
     position: relative;
     margin-top: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite quebra de linha em mobile */
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
@@ -60,21 +62,21 @@ header {
     object-fit: cover;
     border: 5px solid var(--profile-border);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    flex-shrink: 0; /* Impede que a imagem diminua */
+    flex-shrink: 0;
 }
 
 .header-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 250px; /* Evita textos muito estreitos */
+    min-width: 250px;
     flex: 1;
 }
 
 /* Responsivo para telas menores que 768px */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Empilha elementos verticalmente */
+        flex-direction: column;
         text-align: center;
         padding: 1.5rem;
         gap: 15px;
@@ -87,32 +89,17 @@ header {
     }
 
     .header-text {
-        align-items: center; /* Centraliza texto em mobile */
+        align-items: center;
         min-width: auto;
     }
 
     header h1 {
-        font-size: 1.8rem; /* Reduz tamanho do título */
+        font-size: 1.8rem;
         line-height: 1.2;
     }
 
     header p {
-        font-size: 1rem; /* Reduz tamanho do texto */
-    }
-}
-
-/* Ajuste extra para telas muito pequenas */
-@media (max-width: 480px) {
-    header {
-        padding: 1rem;
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    header p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
@@ -202,12 +189,6 @@ header {
     overflow-y: auto;
 }
 
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 #modal-imagem {
     width: 100%;
     max-height: 50vh;
@@ -215,26 +196,10 @@ header {
     border-radius: 5px;
 }
 
-.github-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-}
-
 .github-link a {
     color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
-}
-
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: var(--close-color);
 }
 
 /* Certificações */
@@ -262,80 +227,48 @@ header {
     overflow: hidden;
 }
 
-.certificacao-coluna.dio-scroll {
-    overflow-y: auto;
-}
-
-.certificacao-coluna h3 {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.certificacao-lista {
-    list-style: none;
-    padding: 0;
-}
-
-.certificacao-lista li {
-    padding: 0.6rem 0;
-    line-height: 1.4;
-    border-bottom: 1px solid var(--secondary-text);
-}
-
-.certificacao-lista li:last-child {
-    border-bottom: none;
-}
-
-.certificacao-lista span {
-    display: block;
-    margin-top: 0.2rem;
-    font-size: 0.85em;
-    color: var(--secondary-text);
-}
-
-/* Barra de Scroll Personalizada */
-.certificacao-coluna::-webkit-scrollbar {
-    width: 8px;
-}
-
-.certificacao-coluna::-webkit-scrollbar-track {
-    background: var(--bg-color);
-    border-radius: 4px;
-}
-
-.certificacao-coluna::-webkit-scrollbar-thumb {
-    background: var(--link-color);
-    border-radius: 4px;
-}
-
 /* Rodapé */
 footer {
     background: var(--footer-bg);
-    color: white;
+    color: var(--profile-border); /* marrom claro */
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
 }
 
-.contato-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+/* Texto "Contato" no footer */
+footer h2,
+footer p {
+    color: var(--profile-border); /* marrom claro no tema claro */
 }
 
+.dark-mode footer h2,
+.dark-mode footer p {
+    color: #ffffff; /* branco no tema escuro */
+}
+
+/* Ícones de contato (email, GitHub, LinkedIn) */
 .contato-links a {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+    color: var(--profile-border); /* marrom claro no tema claro */
+    transition: color 0.15s ease, transform 0.12s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contato-links a:hover {
-    color: var(--link-color);
+    color: var(--link-color); /* verde escuro no hover */
+    transform: scale(1.08);
+}
+
+/* Tema escuro: ícones em verde oliva claro, hover marrom claro */
+.dark-mode .contato-links a {
+    color: #8fbc8f; /* verde oliva claro */
+}
+
+.dark-mode .contato-links a:hover {
+    color: var(--profile-border); /* marrom claro */
+    transform: scale(1.08);
 }
 
 /* Botão de Tema */
@@ -357,51 +290,8 @@ footer {
 }
 
 .theme-toggle i {
-    color: var(--text-color);
+    color: var(--link-color);
     font-size: 1.2rem;
-}
-
-/* Responsivo */
-@media (max-width: 1200px) {
-    .certificacoes-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 80px 1.5rem 1.5rem 1.5rem;
-    }
-    
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-        top: 20px;
-        left: 20px;
-    }
-    
-    header h1, header p {
-        margin-left: 140px;
-    }
-    
-    .certificacoes-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .certificacao-coluna {
-        height: auto;
-        overflow: visible;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    
-    header p {
-        font-size: 1rem;
-    }
 }
 
 /* Ajuste geral para títulos */
