@@ -3,251 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Análise de Dados</title>
+    <title>Victor Miguel — Análise de Dados</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
-<header>
-    <img src="assets/euu.jpeg" alt="Foto de Victor Miguel" class="profile-photo">
-    <div class="header-text">
-        <h1>Victor Miguel</h1>
-        <p>Analista de Dados / Cientista de Dados</p>
-        <p>Estudante de Ciência da Computação - UFRPE</p>
-        <p>Email: victor77miguel@gmail.com</p>
-        
-        <!-- Contatos no cabeçalho -->
-        <div class="header-contatos">
-            <a href="https://www.linkedin.com/in/victor-miguel-320291256/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/victor7miguel7" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:victor77miguel@gmail.com"><i class="fas fa-envelope"></i></a>
+
+    <!-- NAV -->
+    <nav class="topnav">
+        <span class="nav-logo">VM</span>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#certificacoes">Certificações</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeBtn" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-bg-shape"></div>
+        <div class="hero-content">
+            <div class="hero-photo-wrap">
+                <img src="assets/euu.jpeg" alt="Foto de Victor Miguel" class="profile-photo">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Porto Digital
+                </div>
+            </div>
+            <div class="hero-text">
+                <p class="hero-eyebrow">Analista & Cientista de Dados</p>
+                <h1 class="hero-name">Victor Miguel</h1>
+                <p class="hero-sub">Estudante de Ciência da Computação · UFRPE · 10º período</p>
+                <div class="hero-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">NoSQL</span>
+                    <span class="tag">Automação de Rotinas</span>
+                    <span class="tag">R</span>
+                </div>
+                <div class="hero-contacts">
+                    <a href="https://www.linkedin.com/in/victor-miguel-320291256/" target="_blank" class="contact-chip">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/victor7miguel7" target="_blank" class="contact-chip">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:victor77miguel@gmail.com" class="contact-chip">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-
-
-   <!-- Seção "Sobre Mim" -->
-<section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>     <strong>Atualmente trabalho como Analista de Dados Jr. na Foco Aluguel de Carros</strong>, onde atuo em <strong>projetos estratégicos de análise e modelagem preditiva</strong>. Sou responsável por <strong>testar APIs externas de previsão de demanda</strong>, utilizando <strong>Postman</strong> e <strong>scripts em Python</strong>, aplicando modelos como <strong>ARIMA, Prophet e LSTM</strong>. Desenvolvi um <strong>modelo de análise de sentimentos com NLP</strong> para mapear críticas de clientes e estou implementando um <strong>modelo de detecção de perfis com potencial fraudulento</strong>.</p>
-
-    <p>     Também atuo com <strong>Google Analytics (GA4)</strong>, analisando o comportamento de usuários com <strong>eventos personalizados</strong>. Tenho experiência com <strong>Pentaho (PDI)</strong> para integração e formatação de dados no <strong>Data Warehouse</strong>, além de criar <strong>dashboards interativos no Power BI</strong> para monitorar <strong>KPIs operacionais e financeiros</strong>.</p>
-
-    <p>     <strong>Sou estudante de Ciência da Computação na UFRPE, atualmente no 10º período</strong>. Tenho forte interesse na <strong>área de dados</strong>, onde pretendo seguir carreira. Desenvolvo projetos com <strong>Python</strong> (pandas, numpy, matplotlib, seaborn) e <strong>R</strong>, abrangendo todo o processo de <strong>extração, limpeza, análise e visualização de dados</strong>. Tenho experiência com <strong>modelos de Machine Learning</strong>, incluindo <strong>predições com séries temporais</strong>, e atualmente estou me aprofundando em <strong>redes neurais</strong>.</p>
-
-    <p>     Participo de um <strong>projeto de iniciação científica como cientista de dados</strong>, fruto de uma parceria entre <strong>UFRPE e IFPE</strong>, com foco na <strong>análise da qualidade do ar</strong>. Neste projeto, desenvolvo <strong>modelos de Machine Learning com Scikit-learn</strong> para interpretar dados de sensores ambientais e criar soluções inteligentes de diagnóstico em tempo real. Esse trabalho também está servindo como base para o meu <strong>Trabalho de Conclusão de Curso (TCC)</strong>.</p>
-
-    <p>     Anteriormente, atuei como <strong>bolsista no time de inovação com foco em Análise de Dados da BBG Telecom</strong>, após vencer um <strong>campeonato de ideathon com foco em IA, Ciência de Dados e Telecomunicações</strong>. No estágio, atuei inicialmente como <strong>analista de dados</strong>, priorizando problemas com maior viabilidade e impacto operacional, e depois como <strong>desenvolvedor frontend</strong>, utilizando <strong>Golang e SQL</strong>.</p>
-
-    <p>     Além disso, possuo experiência com <strong>SQL (MySQL e PostgreSQL), Excel e Power BI</strong>, incluindo domínio de <strong>tabelas dinâmicas e DAX</strong>. Já concluí disciplinas como <strong>Análise de Dados com R, Estatística Exploratória e Inteligência Artificial</strong>, e atualmente curso <strong>Banco de Dados Não Convencionais</strong> e <strong>Tópicos Avançados em Inteligência Artificial</strong>, onde estou desenvolvendo um <strong>algoritmo genético para otimização de parâmetros em modelos de machine learning</strong>.</p>
-</section>
-
-
-    <!-- Seção de Projetos -->
-    <section id="projetos">
-        <h2>Alguns Projetos</h2>
-        <div class="projetos-container">
-            <!-- Projeto 1 -->
-            <div class="projeto-card">
-                <img src="assets/projeto1.png" alt="Projeto 1">
-                <h3> Análise Final da Libertadores</h3>
-                <p>Análise esportiva de dados da final da Libertadores 2024 usando Python e técnicas de webscraping.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/Analise-final-da-libertadores-2024">Ver Detalhes</a>
-            </div>
-            
-            <!-- Projeto 2 -->
-            <div class="projeto-card">
-                <img src="assets/projeto2.png" alt="Projeto 2">
-                <h3>Dashboard de Análise de Vendas</h3>
-                <p>Visualização interativa de dados de vendas com PowerBI.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/PowerBI-Dashboard-Vendas">Ver Detalhes</a>
-            </div>
-            
-            <!-- Projeto 3 -->
-            <div class="projeto-card">
-                <img src="assets/projeto3.png" alt="Projeto 3">
-                <h3>Dashboard de Análise de RH</h3>
-                <p>Visualização interativa de dados de RH com PowerBI.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/PowerBI-Deshboard-RH">Ver Detalhes</a>
-            </div>
-            
-            <!-- Projeto 4 -->
-            <div class="projeto-card">
-                <img src="assets/projeto4.png" alt="Projeto 4">
-                <h3>Dashboard Financeiro</h3>
-                <p>Visualização interativa de dados financeiros com PowerBI.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/PowerBi-Deashboard-Financeiro">Ver Detalhes</a>
-            </div>
-            
-            <!-- Projeto 5 -->
-            <div class="projeto-card">
-                <img src="assets/projeto5.png" alt="Projeto 5">
-                <h3>Dashboard de Produção</h3>
-                <p>Visualização interativa de dados de produção com PowerBI.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/PowerBI-DeshBoard-Producao">Ver Detalhes</a>
-            </div>
-            <!-- Projeto 6 -->
-            <div class="projeto-card">
-                <img src="assets/projeto6.png" alt="Projeto 6">
-                <h3>eBook acadêmico - Introdução à uma prática de análise de dados com python</h3>
-                <p>eBook que ensina como fazer uma análise de dados com Python, partindo de conceitos simples até a previsão com modelos de Machine Learning e suas métricas de avaliação. A análise foi realizada com uma base de dados sobre doenças cardíacas, abordando todo o processo, desde a exploração e limpeza dos dados até a construção e avaliação de modelos preditivos.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/Previs-o-de-diabetes-para-ebook/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20uma%20pr%C3%A1tica%20de%20an%C3%A1lise%20de%20dados%20com%20python.pdf">Ver Detalhes</a>
-            </div>
-        
-
-            <!-- Projeto 7 -->
-            <div class="projeto-card">
-                <img src="assets/projeto7.png" alt="Projeto 7">
-                <h3>Análise de dados sobre: Acidentes de Trânsito em Porto Alegre</h3>
-                <p>Analisei dados de acidentes de trânsito em Porto Alegre usando R para identificar padrões de risco e propor soluções para aumentar a segurança viária. Essa análise contribui para reduzir acidentes, proteger vidas e otimizar o planejamento urbano.</p>
-                <a href="#" class="btn" data-github="https://rpubs.com/Victor77/1229471">Ver Detalhes</a>
-            </div>
-
-             <!-- Projeto 10 -->
-             <div class="projeto-card">
-                <img src="assets/projeto10.png" alt="Projeto 10">
-                <h3>Previsão de Demanda de Produtos de Empresa Global</h3>
-                <p>Trabalhei com a base de dados de uma empresa com atuação global e quatro armazéns estrategicamente distribuídos. A companhia enfrentava desafios na acurácia das previsões de demanda, o que impactava diretamente sua logística, distribuição e controle de estoque.Foram aplicados algoritmos de classificação estudados na disciplina de Inteligência Artificial, Naive Bayes, Árvore de Decisão e KNN.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/previsao-de-demanda-de-produtos---IA">Ver Detalhes</a>
-            </div> 
-
-            <!-- Projeto 9 -->
-            <div class="projeto-card">
-                <img src="assets/projeto9.png" alt="Projeto 9">
-                <h3>Previsão de Indicadores para Empresa de Aluguel de Automóveis</h3>
-                <p>Projeto de análise e modelagem preditiva com foco na otimização da gestão financeira e operacional de uma locadora de veículos. Utilizei modelos SARIMA e XGBoost para prever indicadores-chave, além de desenvolver um dashboard interativo no Power BI para visualização estratégica dos resultados.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/previsao-empresa-automobilistica">Ver Detalhes</a>
-            </div>
-
-            <!-- Projeto 8 -->
-            <div class="projeto-card">
-                <img src="assets/projeto8.png" alt="Projeto 8">
-                <h3>Análise de dados Premier League 2020</h3>
-                <p>O projeto consiste numa ánalise geral sobre os atletas da Premier League(Campeonato inglês de futebol) de 2020 utilizando Python.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/Analise-dados-premier-league-2020">Ver Detalhes</a>
-            </div>
-            
-            <!-- Projeto 11 -->
-            <div class="projeto-card">
-                <img src="assets/projeto11.png" alt="Projeto 8">
-                <h3>Monitoramento Inteligente da Qualidade Ambiental: Uma Abordagem com IA para Detecção de Níveis Críticos de Poluição</h3>
-                <p>Projeto voltado à análise de indicadores de qualidade do ar, com foco em processamento e modelagem de dados captados por sensores ambientais. Envolve todo o fluxo de ETL, limpeza, padronização e seleção de variáveis relevantes, além do uso de modelos de Machine Learning supervisionado (XGBoost, LightGBM e Random Forest) para prever medições e calibrar sensores. O objetivo é ajustar sensores de baixo custo para que alcancem desempenho comparável a sensores robustos, tornando o monitoramento ambiental mais acessível, eficiente e sustentável.</p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/pesquisa-ic-ar">Ver Detalhes</a>
-            </div>
-
-            <!-- Projeto 12 -->
-            <div class="projeto-card">
-                <img src="assets/projeto12.png" alt="Projeto 8">
-                <h3>Sistema de classificação de Produtos Automática com NER</h3>
-                <p>Projeto voltado para captar e classificar buscas feitas por usuários sobre determinados produtos, sepando em tags permitindo futuras análises </p>
-                <a href="#" class="btn" data-github="https://github.com/victor7miguel7/MINERACAO-DE-TEXTO--Sistema-classificacao-automatica-produtos-NER---SPACY-VS-SBERT">Ver Detalhes</a>
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+        <div class="section-inner">
+            <div class="section-label">01 · Sobre Mim</div>
+            <h2 class="section-title">Transformando dados <em>em decisões</em></h2>
+            <div class="sobre-grid">
+                <div class="sobre-col">
+                    <p><strong>Atualmente atuo como Analista de Dados Pleno na Yolo Coliving Tecnologia</strong>, no Porto Digital, desenvolvendo soluções orientadas a dados para apoiar decisões estratégicas e operacionais. Trabalho com Python, DynamoDB e ferramentas de Business Intelligence, realizando análises de dados, automações e construção de dashboards para acompanhamento de indicadores e geração de insights.</p>
+                    <p>Anteriormente, atuei como Analista de Dados Jr. na Foco Aluguel de Carros, participando de projetos estratégicos de análise e modelagem preditiva. Fui responsável por testar APIs externas de previsão de demanda utilizando Postman e scripts em Python, aplicando modelos como ARIMA, Prophet e LSTM. Também desenvolvi um modelo de análise de sentimentos com NLP para mapear críticas de clientes e participei da implementação de um modelo de detecção de perfis com potencial fraudulento.</p>
+                    <p>Possuo experiência com Google Analytics (GA4), realizando análises de comportamento de usuários por meio de eventos personalizados. Atuei também com Pentaho (PDI) em processos de integração e transformação de dados para Data Warehouse, além da criação de dashboards interativos no Power BI para monitoramento de KPIs operacionais e financeiros.</p>
+                </div>
+                <div class="sobre-col">
+                    <p>Além da experiência profissional, participo de um projeto de iniciação científica como cientista de dados, fruto de uma parceria entre <strong>Universidade Federal Rural de Pernambuco</strong> e <strong>Instituto Federal de Pernambuco</strong>, com foco na análise da qualidade do ar. Nesse projeto, desenvolvo modelos de Machine Learning com Scikit-learn para interpretação de dados de sensores ambientais e criação de soluções inteligentes de diagnóstico em tempo real — tema que também serve como base para meu TCC.</p>
+                    <p>Também atuei como bolsista no time de inovação da BBG Telecom após conquistar destaque em um campeonato de ideathon voltado para IA, Ciência de Dados e Telecomunicações. Tenho experiência com SQL (MySQL e PostgreSQL), Excel avançado, Power BI, DAX e modelagem de dados aplicada à análise de negócios e ciência de dados.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Habilidades -->
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <div class="habilidades-container">
-            <div class="habilidade-item">
-                <i class="fas fa-database"></i>
-                <p>SQL</p>
+
+    <!-- PROJETOS (CAROUSEL) -->
+    <section id="projetos" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-label">02 · Projetos</div>
+            <h2 class="section-title">Alguns <em>trabalhos de estudos</em></h2>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Projeto anterior">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <div class="carousel-viewport" id="carouselViewport">
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto1.png" alt="Análise Final da Libertadores">
+                                <div class="card-tag">Python · Webscraping</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Análise Final da Libertadores</h3>
+                                <p>Análise esportiva de dados da final da Libertadores 2024 usando Python e técnicas de webscraping.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/Analise-final-da-libertadores-2024">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto2.png" alt="Dashboard de Vendas">
+                                <div class="card-tag">Power BI</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Dashboard de Análise de Vendas</h3>
+                                <p>Visualização interativa de dados de vendas com dashboards dinâmicos no Power BI.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/PowerBI-Dashboard-Vendas">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto3.png" alt="Dashboard de RH">
+                                <div class="card-tag">Power BI</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Dashboard de Análise de RH</h3>
+                                <p>Visualização interativa de dados de RH com Power BI para monitorar indicadores de pessoas.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/PowerBI-Deshboard-RH">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto4.png" alt="Dashboard Financeiro">
+                                <div class="card-tag">Power BI</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Dashboard Financeiro</h3>
+                                <p>Visualização interativa de dados financeiros com KPIs e drill-down no Power BI.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/PowerBi-Deashboard-Financeiro">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto5.png" alt="Dashboard de Produção">
+                                <div class="card-tag">Power BI</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Dashboard de Produção</h3>
+                                <p>Visualização interativa de dados de produção com Power BI para gestão operacional.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/PowerBI-DeshBoard-Producao">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto6.png" alt="eBook análise de dados">
+                                <div class="card-tag">Python · ML</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>eBook — Introdução à Análise de Dados com Python</h3>
+                                <p>eBook acadêmico cobrindo todo o processo — da exploração e limpeza de dados até modelos preditivos com Machine Learning e métricas de avaliação.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/Previs-o-de-diabetes-para-ebook/blob/main/Introdu%C3%A7%C3%A3o%20%C3%A0%20uma%20pr%C3%A1tica%20de%20an%C3%A1lise%20de%20dados%20com%20python.pdf">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto7.png" alt="Acidentes de Trânsito">
+                                <div class="card-tag">R · Análise</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Acidentes de Trânsito em Porto Alegre</h3>
+                                <p>Análise com R para identificar padrões de risco e propor soluções para segurança viária.</p>
+                                <a href="#" class="card-link btn" data-github="https://rpubs.com/Victor77/1229471">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto10.png" alt="Previsão de Demanda">
+                                <div class="card-tag">ML · Classificação</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Previsão de Demanda de Produtos — Empresa Global</h3>
+                                <p>Aplicação de Naive Bayes, Árvore de Decisão e KNN para prever demanda em quatro armazéns estratégicos.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/previsao-de-demanda-de-produtos---IA">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto9.png" alt="Previsão de Indicadores">
+                                <div class="card-tag">SARIMA · XGBoost</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Previsão de Indicadores — Locadora de Automóveis</h3>
+                                <p>Modelagem preditiva com SARIMA e XGBoost para otimizar gestão financeira e operacional, com dashboard no Power BI.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/previsao-empresa-automobilistica">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto8.png" alt="Premier League 2020">
+                                <div class="card-tag">Python · Esportes</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Análise de Dados — Premier League 2020</h3>
+                                <p>Análise geral dos atletas da Premier League de 2020 com Python, identificando padrões de desempenho.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/Analise-dados-premier-league-2020">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto11.png" alt="Qualidade do Ar">
+                                <div class="card-tag">XGBoost · IoT · IC</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Monitoramento Inteligente da Qualidade do Ar com IA</h3>
+                                <p>Modelos supervisionados (XGBoost, LightGBM, Random Forest) para calibrar sensores de baixo custo a nível de sensores robustos.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/pesquisa-ic-ar">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <div class="card-img-wrap">
+                                <img src="assets/projeto12.png" alt="Classificação com NER">
+                                <div class="card-tag">NLP · spaCy · SBERT</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Classificação Automática de Produtos com NER</h3>
+                                <p>Sistema de captura e classificação de buscas de usuários com spaCy e SBERT, gerando tags para análises futuras.</p>
+                                <a href="#" class="card-link btn" data-github="https://github.com/victor7miguel7/MINERACAO-DE-TEXTO--Sistema-classificacao-automatica-produtos-NER---SPACY-VS-SBERT">
+                                    Ver projeto <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Próximo projeto">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
-            <div class="habilidade-item">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="habilidade-item">
-                <i class="fas fa-chart-bar"></i>
-                <p>Power BI</p>
-            </div>
-            <!-- Adicione R e Excel -->
-            <div class="habilidade-item">
-                <i class="fab fa-r-project"></i> 
-                <p>R</p>
-            </div>
-            <div class="habilidade-item">
-                <i class="fas fa-file-excel"></i> 
-                <p>Excel</p>
+
+            <!-- Indicadores -->
+            <div class="carousel-dots" id="carouselDots"></div>
+            <p class="carousel-counter"><span id="currentSlide">1</span> / <span id="totalSlides">12</span></p>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section">
+        <div class="section-inner">
+            <div class="section-label">03 · Habilidades</div>
+            <h2 class="section-title">Stack <em>técnico</em></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <p class="skill-name">Python</p>
+                    <p class="skill-desc">pandas, numpy, scikit-learn, matplotlib, seaborn, LSTM, Prophet</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <p class="skill-name">SQL</p>
+                    <p class="skill-desc">MySQL, PostgreSQL, modelagem relacional, queries avançadas</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <p class="skill-name">Power BI</p>
+                    <p class="skill-desc">Dashboards interativos, DAX, KPIs operacionais e financeiros</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-r-project"></i></div>
+                    <p class="skill-name">R</p>
+                    <p class="skill-desc">Análise exploratória, estatística, visualização de dados</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                    <p class="skill-name">Excel</p>
+                    <p class="skill-desc">Tabelas dinâmicas, fórmulas avançadas, automação</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <p class="skill-name">Machine Learning</p>
+                    <p class="skill-desc">XGBoost, LightGBM, Random Forest, séries temporais, NLP</p>
+                </div>
             </div>
         </div>
     </section>
 
-<!-- Seção de Certificações -->
-<section id="certificacoes">
-    <h2>Certificações</h2>
-    <div class="certificacoes-grid">
-        <!-- Coluna 1: Hashtag Treinamentos -->
-        <div class="certificacao-coluna">
-            <h3><i class="fas fa-certificate"></i> Hashtag Treinamentos</h3>
-            <ul class="certificacao-lista">
-                <li>Jornada Inglês (jan/2025)<br><span>Inglês para negócios</span></li>
-                <li>Jornada Inteligência Artificial (out/2024)<br><span>Inteligência Artificial</span></li>
-                <li>Jornada Python (out/2024)<br><span>Python, Análise de Dados Estatísticos,<br>Automação RPA</span></li>
-                <li>Semana do Excel (mai/2024)<br><span>Microsoft Excel</span></li>
-                <li>Intensivo Power BI (abr/2023)<br><span>Microsoft Power BI</span></li>
-            </ul>
-        </div>
+    <!-- CERTIFICAÇÕES -->
+    <section id="certificacoes" class="section section-alt">
+        <div class="section-inner">
+            <div class="section-label">04 · Certificações</div>
+            <h2 class="section-title">Formação <em>complementar</em></h2>
 
-        <!-- Coluna 2: DIO -->
-        <div class="certificacao-coluna dio-scroll">
-            <h3><i class="fas fa-laptop-code"></i> DIO</h3>
-            <ul class="certificacao-lista">
-                <li>Coleta e Extração de Dados com Power BI (mai/2024)<br><span>Microsoft Power BI</span></li>
-                <li>Limpeza e Transformação de Dados com Power BI (mai/2024)<br><span>Microsoft Power BI</span></li>
-                <li>Criando Dashboards Interativos com Power BI (abr/2024)<br><span>Microsoft Power BI</span></li>
-                <li>Algoritmos de SVM (mar/2024)<br><span>Aprendizado de Máquina</span></li>
-                <li>Banco de Dados NoSQL (mar/2024)<br><span>Redis, NoSQL, MongoDB</span></li>
-                <li>Banco de Dados Relacionais (mar/2024)<br><span>SQL, Banco de Dados</span></li>
-                <li>Ciência de Dados com Python (mar/2024)<br><span>Python, Análise de Dados</span></li>
-                <li>Machine Learning Bioinspirado (mar/2024)<br><span>Aprendizado de Máquina</span></li>
-                <li>Python para Machine Learning (mar/2024)<br><span>Aprendizado de Máquina</span></li>
-                <li>Redes Neurais Artificiais (mar/2024)<br><span>Redes Neurais</span></li>
-                <li>Desenvolvimento Moderno (nov/2022)<br><span>Software</span></li>
-                <li>Orange Tech (nov/2022)</li>
-            </ul>
+            <div style="margin-bottom: 2rem;">
+                <a href="https://www.linkedin.com/in/victor-miguel-320291256/details/certifications/"
+                target="_blank"
+                class="contact-chip">
+                    <i class="fab fa-linkedin"></i> Ver comprovantes no LinkedIn
+                </a>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-col">
+                    <div class="cert-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Hashtag Treinamentos</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><strong>Jornada Inglês</strong> <span class="cert-date">jan/2025</span><br><em>Inglês para negócios</em></li>
+                        <li><strong>Jornada Inteligência Artificial</strong> <span class="cert-date">out/2024</span><br><em>Inteligência Artificial</em></li>
+                        <li><strong>Jornada Python</strong> <span class="cert-date">out/2024</span><br><em>Python, Análise Estatística, Automação RPA</em></li>
+                        <li><strong>Semana do Excel</strong> <span class="cert-date">mai/2024</span><br><em>Microsoft Excel</em></li>
+                        <li><strong>Intensivo Power BI</strong> <span class="cert-date">abr/2023</span><br><em>Microsoft Power BI</em></li>
+                    </ul>
+                </div>
+                <div class="cert-col cert-scroll">
+                    <div class="cert-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>DIO</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><strong>Coleta e Extração de Dados com Power BI</strong> <span class="cert-date">mai/2024</span></li>
+                        <li><strong>Limpeza e Transformação de Dados com Power BI</strong> <span class="cert-date">mai/2024</span></li>
+                        <li><strong>Criando Dashboards Interativos com Power BI</strong> <span class="cert-date">abr/2024</span></li>
+                        <li><strong>Algoritmos de SVM</strong> <span class="cert-date">mar/2024</span><br><em>Aprendizado de Máquina</em></li>
+                        <li><strong>Banco de Dados NoSQL</strong> <span class="cert-date">mar/2024</span><br><em>Redis, NoSQL, MongoDB</em></li>
+                        <li><strong>Banco de Dados Relacionais</strong> <span class="cert-date">mar/2024</span></li>
+                        <li><strong>Ciência de Dados com Python</strong> <span class="cert-date">mar/2024</span></li>
+                        <li><strong>Machine Learning Bioinspirado</strong> <span class="cert-date">mar/2024</span></li>
+                        <li><strong>Redes Neurais Artificiais</strong> <span class="cert-date">mar/2024</span></li>
+                        <li><strong>Desenvolvimento Moderno</strong> <span class="cert-date">nov/2022</span></li>
+                        <li><strong>Orange Tech</strong> <span class="cert-date">nov/2022</span></li>
+                    </ul>
+                </div>
+                <div class="cert-col">
+                    <div class="cert-header">
+                        <i class="fas fa-university"></i>
+                        <h3>Outras Instituições</h3>
+                    </div>
+                    <ul class="cert-list">
+                        <li><strong>Microsoft Power BI para Business Intelligence e Data Science</strong> <span class="cert-date">abr/2025</span><br><em>Data Science Academy</em></li>
+                        <li><strong>Carreiras em Ciência da Computação</strong> <span class="cert-date">jul/2022</span><br><em>SECOMP/UFRPE</em></li>
+                        <li><strong>O Mundo do Trabalho 4.0</strong> <span class="cert-date">mai/2022</span><br><em>SOFTEX</em></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Coluna 3: Outras -->
-        <div class="certificacao-coluna">
-            <h3><i class="fas fa-university"></i> Outras Instituições</h3>
-            <ul class="certificacao-lista">
-                <li>Microsoft Power BI Para Business Intelligence e Data Science (abr/2025)<br><span>DATA SCIENCE ACADEMY</span></li>
-                <li>Carreiras em Ciência da Computação (jul/2022)<br><span>SECOMP/UFRPE</span></li>
-                <li>O Mundo do Trabalho 4.0 (mai/2022)<br><span>SOFTEX</span></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-    <!-- Rodapé com Contato -->
-    <footer>
-        <h2>Contato</h2>
-        <div class="contato-links">
-            <a href="https://www.linkedin.com/in/victor-miguel-320291256/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/victor7miguel7" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:victor77miguel@gmail.com"><i class="fas fa-envelope"></i></a>
+    <!-- FOOTER -->
+    <footer id="contato" class="footer">
+        <div class="footer-inner">
+            <p class="footer-name">Victor Miguel</p>
+            <p class="footer-tagline">Analista & Cientista de Dados · UFRPE</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/victor-miguel-320291256/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/victor7miguel7" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:victor77miguel@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copy">victor77miguel@gmail.com</p>
         </div>
     </footer>
-    <!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-titulo"></h2>
-        <div class="modal-body">
-            <img id="modal-imagem" src="" alt="Imagem do Projeto">
-            <p id="modal-descricao"></p>
-            <div class="github-link">
-                <i class="fab fa-github"></i>
-                <a id="modal-github" href="#" target="_blank">Ver no GitHub</a>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modal-imagem" src="" alt="">
+            <div class="modal-body">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-descricao"></p>
+                <a id="modal-github" href="#" target="_blank" class="modal-cta">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
             </div>
         </div>
     </div>
-</div>
-    <!-- Script JavaScript -->
+
     <script src="script.js"></script>
 </body>
 </html>
