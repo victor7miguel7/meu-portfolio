@@ -329,6 +329,19 @@ em {
     transform: translateY(-2px);
 }
 
+/* Botão de destaque (currículo) */
+.contact-chip-cta {
+    background: var(--green-dark);
+    color: #fff;
+    border-color: var(--green-dark);
+}
+
+.contact-chip-cta:hover {
+    background: var(--green-mid);
+    border-color: var(--green-mid);
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .hero-content { flex-direction: column; text-align: center; gap: 2rem; }
     .hero-contacts { justify-content: center; }
